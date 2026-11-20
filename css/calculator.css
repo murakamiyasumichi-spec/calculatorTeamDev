@@ -1,0 +1,111 @@
+@charset "UTF-8";
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #0F172A;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+}
+
+.calculator {
+    background-color: #212936;
+    width: 320px;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.display-container {
+    background-color: #171D2B;
+    border-radius: 15px;
+    padding: 15px 20px;
+    margin-bottom: 25px;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 98px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* 上段：過去の計算式（previousOperand） */
+.previous-operand {
+    color: #94A3B8;
+    font-size: 16px;
+    min-height: 22px;
+    letter-spacing: 1px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* 下段：現在の入力・計算結果（currentOperand） */
+.current-operand {
+    color: #F8FAFC;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 1.1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+button {
+    width: 100%;
+    height: 60px;
+    border-radius: 12px;
+    border: none;
+    font-size: 22px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.1s;
+}
+
+button:active {
+    opacity: 0.7;
+}
+
+/* 1行目3列目の空白レイアウト用 */
+.btn-empty {
+    width: 100%;
+    height: 60px;
+}
+
+.btn-num {
+    background-color: #333F55;
+    color: #FFFFFF;
+}
+
+.btn-top {
+    background-color: #555555;
+    color: #38BDF8;
+}
+
+.btn-op {
+    background-color: #38BDF8;
+    color: #000000;
+    font-size: 22px;
+}
+
+.btn-opn {
+    background-color: #3B82F6;
+    color: #FFFFFF;
+    font-size: 22px;
+}
+
+.btn-zero {
+    grid-column: span 2;
+}
